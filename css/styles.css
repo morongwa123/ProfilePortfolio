@@ -168,20 +168,24 @@ a { text-decoration: none; color: inherit; }
   box-shadow: 0 20px 40px rgba(0,0,0,0.28);
 }
 
-/* Bardeli — Varsity navy → cherry red */
+/* Bardeli — UCLA Blue, subtle light gradient at bottom */
 .card-bardeli {
-  background: linear-gradient(160deg, #1A2868 0%, #7A1B33 55%, #C41230 100%);
+  background: linear-gradient(180deg, #55768C 0%, #55768C 75%, #8FA8BB 100%);
 }
 
-/* NDAMP — YInMn blue → red */
+/* NDAMP — Maroon, subtle light gradient at bottom */
 .card-ndamp {
-  background: linear-gradient(160deg, #2E4C8C 0%, #6E3560 55%, #FA2D1A 100%);
+  background: linear-gradient(180deg, #B83556 0%, #B83556 75%, #D67089 100%);
 }
+.card-ndamp .tag { background: #DC97A5; color: #4A1B2E; }
 
-/* Campaigns — Citrus → Amalfi */
+/* Campaigns — Citrus, subtle light gradient at bottom */
 .card-campaigns {
-  background: linear-gradient(160deg, #FFA62B 0%, #7A6E6E 55%, #2E5AA7 100%);
+  background: linear-gradient(180deg, #FFA62B 0%, #FFA62B 75%, #FFC670 100%);
 }
+.card-campaigns .tag { background: #2E5AA7; color: #F8E6A0; }
+.card-campaigns h3, .card-campaigns .card-link { color: #1A2E4C; }
+.card-campaigns p { color: #4A3A1E; }
 
 /* empty "coming soon" card — keep it neutral, not gradient */
 .proj-card-empty {
