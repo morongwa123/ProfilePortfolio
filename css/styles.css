@@ -122,57 +122,83 @@ a { text-decoration: none; color: inherit; }
 .work, .skills, .about-teaser { padding: 4rem 2rem; max-width: 1100px; margin: 0 auto; }
 
 /* ---- project cards ---- */
+/* ---- project cards ---- */
 .card-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 1.75rem;
+  gap: 2.5rem;
+  padding-top: 1rem;
 }
 
 .proj-card {
   position: relative;
   display: block;
-  background: #fff;
-  padding: 2rem 1.75rem 1.75rem;
-  border-radius: 10px;
-  border: 1px solid #E4DACB;
-  box-shadow: 0 4px 14px rgba(37, 52, 79, 0.05);
-  overflow: hidden;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-.proj-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 12px 26px rgba(37, 52, 79, 0.09);
+  padding: 2.5rem 1.75rem 2rem;
+  border-radius: 18px;
+  border: none;
+  color: #fff;
+  box-shadow: 0 10px 24px rgba(0,0,0,0.18);
+  transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.35s ease;
 }
 
-.card-bar {
-  position: absolute;
-  top: 0; left: 0; right: 0;
-  height: 4px;
-}
-/* tech projects — slate/navy */
-.bar-1 { background: var(--muted); }
-.bar-2 { background: var(--ink); }
-/* marketing/campaign work — coffee/wine */
-.bar-3 { background: var(--coffee); }
-.bar-4 { background: var(--wine); }
+.proj-card h3 { font-family: var(--font-display); font-weight: 700; font-size: 1.25rem; margin: 0.5rem 0 0.9rem; color: #fff; }
+.proj-card p { font-size: 0.92rem; margin-bottom: 1.5rem; color: rgba(255,255,255,0.85); }
+.proj-card .card-link { font-weight: 700; color: #fff; }
 
-.tag {
+.proj-card .tag {
   display: inline-block;
+  font-weight: 700;
   font-size: 0.75rem;
-  font-weight: 600;
-  padding: 0.3rem 0.75rem;
+  padding: 0.35rem 0.85rem;
   border-radius: 999px;
-  margin-bottom: 0.9rem;
+  background: rgba(255,255,255,0.25);
+  color: #fff;
+  backdrop-filter: blur(4px);
+  margin-bottom: 0;
 }
-/* default tag = tech */
-.tag { color: var(--muted); background: #EDF1F4; }
-/* campaign tag override */
-.tag-campaign { color: var(--coffee); background: #F3ECE3; }
-.tag-muted { color: var(--muted); background: #EDF1F4; }
 
-.proj-card h3 { font-family: var(--font-display); font-weight: 700; font-size: 1.2rem; margin-bottom: 0.6rem; color: var(--ink); }
-.proj-card p { font-size: 0.92rem; color: var(--muted); margin-bottom: 1.25rem; }
-.card-link { font-weight: 600; font-size: 0.9rem; color: var(--wine); }
+/* tilt each card differently */
+.card-bardeli   { transform: rotate(-4deg); }
+.card-ndamp     { transform: rotate(3deg); }
+.card-campaigns { transform: rotate(-2deg); }
+
+/* straighten + lift on hover */
+.proj-card:hover {
+  transform: rotate(0deg) translateY(-10px) scale(1.02);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.28);
+}
+
+/* Bardeli — Varsity navy → cherry red */
+.card-bardeli {
+  background: linear-gradient(160deg, #1A2868 0%, #7A1B33 55%, #C41230 100%);
+}
+
+/* NDAMP — YInMn blue → red */
+.card-ndamp {
+  background: linear-gradient(160deg, #2E4C8C 0%, #6E3560 55%, #FA2D1A 100%);
+}
+
+/* Campaigns — Citrus → Amalfi */
+.card-campaigns {
+  background: linear-gradient(160deg, #FFA62B 0%, #7A6E6E 55%, #2E5AA7 100%);
+}
+
+/* empty "coming soon" card — keep it neutral, not gradient */
+.proj-card-empty {
+  background: transparent;
+  border: 2px dashed #C9BFA8;
+  box-shadow: none;
+  color: var(--muted);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 180px;
+  transform: none;
+}
+.proj-card-empty:hover { transform: none; box-shadow: none; }
+.proj-card-empty h3 { color: var(--ink); }
+.proj-card-empty p { color: var(--muted); }
+.proj-card-empty .tag { background: #EDE6D8; color: var(--muted); }
 
 /* ---- pills ---- */
 .pill-row { display: flex; flex-wrap: wrap; gap: 0.75rem; justify-content: center; }
