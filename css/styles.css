@@ -6,7 +6,7 @@
   --coffee: #6F4D38;
   --wine: #632024;      /* Caput Mortuum */
 
-  --font-display: 'Playfair Display', serif;
+--font-display: 'Playfair Display', serif;
   --font-body: 'Inter', sans-serif;
 }
 
@@ -43,6 +43,8 @@ a { text-decoration: none; color: inherit; }
 .nav-toggle { display: none; background: none; border: none; font-size: 1.5rem; cursor: pointer; color: var(--ink); }
 
 /* ---- hero ---- */
+
+
 .hero {
   padding: 5rem 2rem 4rem;
   max-width: 760px;
@@ -60,7 +62,7 @@ a { text-decoration: none; color: inherit; }
 }
 
 .hero h1 {
-  font-family: var(--font-display);
+  font-family: 'Poppins', sans-serif;
   font-weight: 700;
   font-size: 2.75rem;
   line-height: 1.25;
